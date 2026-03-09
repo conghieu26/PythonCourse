@@ -22,7 +22,7 @@ Hiện tại đã hoàn thành **7 / 20 projects**.
 |9|Number Guessing Game|Planned|
 |10|Rock Paper Scissors Game|Planned|
 |11|Dice Roller Program|Planned|
-|12|Banking Program|Planned|
+|12|Banking Program|Completed|
 |13|Slot Machine|Planned|
 |14|Encryption Program|Planned|
 |15|Hangman Game|Planned|

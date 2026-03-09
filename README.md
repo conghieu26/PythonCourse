@@ -18,7 +18,7 @@ Hiện tại đã hoàn thành **7 / 20 projects**.
 |5|Shopping Cart Program|Completed|
 |6|Temperature Converter|Completed|
 |7|Weight Converter|Completed|
-|8|Concession Stand Program|Planned|
+|8|Concession Stand Program|Completed|
 |9|Number Guessing Game|Planned|
 |10|Rock Paper Scissors Game|Planned|
 |11|Dice Roller Program|Planned|

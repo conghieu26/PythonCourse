@@ -19,8 +19,8 @@ Hiện tại đã hoàn thành **7 / 20 projects**.
 |6|Temperature Converter|Chuyển đổi Celsius ↔ Fahrenheit|Completed|
 |7|Weight Converter|Chuyển đổi Kilogram ↔ Pound|Completed|
 |8|Concession Stand Program|Mô phỏng quầy bán đồ ăn đơn giản|Completed|
-|9|Number Guessing Game|Game đoán số ngẫu nhiên|Planned|
-|10|Rock Paper Scissors Game|Game kéo búa bao|Planned|
+|9|Number Guessing Game|Game đoán số ngẫu nhiên|Completed|
+|10|Rock Paper Scissors Game|Game kéo búa bao|Completed|
 |11|Dice Roller Program|Chương trình tung xúc xắc|Planned|
 |12|Banking Program|Mô phỏng hệ thống ngân hàng cơ bản|Completed|
 |13|Slot Machine|Game máy đánh bạc đơn giản|Planned|

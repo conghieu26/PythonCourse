@@ -3,7 +3,7 @@
 Repository này chứa các mini projects được thực hiện trong quá trình học Python.  
 Mục tiêu của repository là xây dựng **20 Python mini projects** để luyện tập kỹ năng lập trình.
 
-Hiện tại đã hoàn thành **12 / 20 projects**.
+Hiện tại đã hoàn thành **13 / 20 projects**.
 
 ---
 
@@ -23,7 +23,7 @@ Hiện tại đã hoàn thành **12 / 20 projects**.
 |10|Rock Paper Scissors Game|Game kéo búa bao|Completed|
 |11|Dice Roller Program|Chương trình tung xúc xắc|Completed|
 |12|Banking Program|Mô phỏng hệ thống ngân hàng cơ bản|Completed|
-|13|Slot Machine|Game máy đánh bạc đơn giản|Planned|
+|13|Slot Machine|Game máy đánh bạc đơn giản|Completed|
 |14|Encryption Program|Chương trình mã hóa văn bản|Planned|
 |15|Hangman Game|Game đoán chữ Hangman|Planned|
 |16|Alarm Clock|Chương trình báo thức|Planned|
@@ -56,6 +56,7 @@ PythonProject/
 |   ├── dice_roller_program.py
 |   ├── rock_paper_scissors_game.py
 |   ├── banking_program.py
+|   ├── slot_machine.py
 └── README.md
 ```
 

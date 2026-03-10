@@ -9,28 +9,28 @@ Hiện tại đã hoàn thành **7 / 20 projects**.
 
 # Project Progress
 
-| # | Project | Status |
-|---|--------|------|
-|1|Countdown Timer|Completed|
-|2|Madlibs Game|Completed|
-|3|Python Calculator|Completed|
-|4|Quiz Game|Completed|
-|5|Shopping Cart Program|Completed|
-|6|Temperature Converter|Completed|
-|7|Weight Converter|Completed|
-|8|Concession Stand Program|Completed|
-|9|Number Guessing Game|Planned|
-|10|Rock Paper Scissors Game|Planned|
-|11|Dice Roller Program|Planned|
-|12|Banking Program|Completed|
-|13|Slot Machine|Planned|
-|14|Encryption Program|Planned|
-|15|Hangman Game|Planned|
-|16|Alarm Clock|Planned|
-|17|Digital Clock Program|Planned|
-|18|Stopwatch Program|Planned|
-|19|Weather API App|Planned|
-|20|Extra Python Project|Planned|
+| # | Project | Description | Status |
+|---|---|---|---|
+|1|Countdown Timer|Countdown theo số giây nhập vào|Completed|
+|2|Madlibs Game|Game nhập từ để tạo câu chuyện|Completed|
+|3|Python Calculator|Máy tính cơ bản chạy trên terminal|Completed|
+|4|Quiz Game|Game trắc nghiệm câu hỏi và tính điểm|Completed|
+|5|Shopping Cart Program|Mô phỏng hệ thống giỏ hàng đơn giản|Completed|
+|6|Temperature Converter|Chuyển đổi Celsius ↔ Fahrenheit|Completed|
+|7|Weight Converter|Chuyển đổi Kilogram ↔ Pound|Completed|
+|8|Concession Stand Program|Mô phỏng quầy bán đồ ăn đơn giản|Completed|
+|9|Number Guessing Game|Game đoán số ngẫu nhiên|Planned|
+|10|Rock Paper Scissors Game|Game kéo búa bao|Planned|
+|11|Dice Roller Program|Chương trình tung xúc xắc|Planned|
+|12|Banking Program|Mô phỏng hệ thống ngân hàng cơ bản|Completed|
+|13|Slot Machine|Game máy đánh bạc đơn giản|Planned|
+|14|Encryption Program|Chương trình mã hóa văn bản|Planned|
+|15|Hangman Game|Game đoán chữ Hangman|Planned|
+|16|Alarm Clock|Chương trình báo thức|Planned|
+|17|Digital Clock Program|Đồng hồ điện tử hiển thị thời gian|Planned|
+|18|Stopwatch Program|Đồng hồ bấm giờ|Planned|
+|19|Weather API App|Ứng dụng lấy dữ liệu thời tiết từ API|Planned|
+|20|Extra Python Project|Dự án Python bổ sung|Planned|
 
 ---
 
@@ -50,42 +50,11 @@ PythonProject/
 │   ├── quiz_game.py
 │   ├── shopping_cart_program.py
 │   ├── temperature_convert.py
-│   └── weight_converter.py
-│
+│   ├── weight_converter.py
+│   ├── number_guessing_name.py
+|   ├── concession_stand.py
 └── README.md
 ```
-
----
-
-# Completed Projects
-
-### Countdown Timer
-File: `countdown_timer_program.py`  
-Chương trình đếm ngược theo số giây nhập vào.
-
-### Madlibs Game
-File: `madlibs_game.py`  
-Game nhập từ để tạo câu chuyện.
-
-### Python Calculator
-File: `python_calculator.py`  
-Máy tính cơ bản chạy trên terminal.
-
-### Quiz Game
-File: `quiz_game.py`  
-Game trắc nghiệm câu hỏi và tính điểm.
-
-### Shopping Cart Program
-File: `shopping_cart_program.py`  
-Mô phỏng hệ thống giỏ hàng đơn giản.
-
-### Temperature Converter
-File: `temperature_convert.py`  
-Chuyển đổi Celsius ↔ Fahrenheit.
-
-### Weight Converter
-File: `weight_converter.py`  
-Chuyển đổi Kilogram ↔ Pound.
 
 ---
 

@@ -1,4 +1,4 @@
-# PythonCourse
+ # PythonCourse
 
 Repository này chứa các mini projects được thực hiện trong quá trình học Python.  
 Mục tiêu của repository là xây dựng **20 Python mini projects** để luyện tập kỹ năng lập trình.
@@ -76,9 +76,3 @@ python Project/python_calculator.py
 
 ---
 
-# Learning Source
-
-Tutorial được sử dụng trong quá trình học:
-
-Bro Code – Python Full Course  
-https://www.youtube.com/watch?v=ix9cRaBkVe0

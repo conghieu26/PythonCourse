@@ -18,7 +18,7 @@ Repository này chứa các **Python mini projects cơ bản** được viết l
 ---
 
 ## 📊 Progress
-**Completed: 13 / 20 projects**
+**Completed: 14 / 20 projects**
 
 | # | Project | Description | Status |
 |---|--------|------------|--------|
@@ -35,7 +35,7 @@ Repository này chứa các **Python mini projects cơ bản** được viết l
 |11|Dice Roller Program|Tung xúc xắc|✅ Completed|
 |12|Banking Program|Mô phỏng ngân hàng|✅ Completed|
 |13|Slot Machine|Game máy đánh bạc|✅ Completed|
-|14|Encryption Program|Mã hóa văn bản|🕒 Planned|
+|14|Encryption Program|Mã hóa văn bản|✅ Completed|
 |15|Hangman Game|Game đoán chữ|🕒 Planned|
 |16|Alarm Clock|Báo thức|🕒 Planned|
 |17|Digital Clock|Đồng hồ điện tử|🕒 Planned|
@@ -67,7 +67,7 @@ PythonProject/
 │   ├── slot_machine.py
 │   ├── temperature_convert_program.py
 │   ├── weight_converter_program.py
-│
+│   ├── encryption_program.py
 └── README.md
 ```
 

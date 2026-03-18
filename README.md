@@ -18,7 +18,7 @@ Repository này chứa các **Python mini projects cơ bản và Extra Project**
 ---
 
 ## 📊 Progress
-**Completed: 15 / 20 projects**
+**Completed: 15 / 15 projects**
 
 | # | Project | Description | Status |
 |---|--------|------------|--------|

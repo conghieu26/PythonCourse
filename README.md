@@ -36,7 +36,7 @@ Repository này chứa các **Python mini projects cơ bản và Extra Project**
 |12|Banking Program|Mô phỏng ngân hàng|✅ Completed|
 |13|Slot Machine|Game máy đánh bạc|✅ Completed|
 |14|Encryption Program|Mã hóa văn bản|✅ Completed|
-|25|Extra Project|Dự án bổ sung|✅ Completed|
+|15|Extra Project|Dự án bổ sung|✅ Completed|
 
 ---
 

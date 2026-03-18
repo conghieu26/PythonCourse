@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Final Project Frontend</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Final Project Frontend</h1>
+    <p class="lead">Giao diện cơ bản để test API FastAPI. Mở file này bằng trình duyệt, sau đó bật backend ở <code>http://127.0.0.1:8000</code>.</p>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Create User</h2>
+        <p class="sub">Tạo tài khoản và lưu vào database.</p>
+        <form id="create-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Nguyen Van A" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="a@example.com" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="123456" required>
+          </div>
+          <div class="actions">
+            <button type="submit">Create</button>
+          </div>
+        </form>
+        <div id="create-status" class="status"></div>
+      </section>
+
+      <section class="card">
+        <h2>Login</h2>
+        <p class="sub">Đăng nhập để lấy access token.</p>
+        <form id="login-form">
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" placeholder="a@example.com" required>
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" placeholder="123456" required>
+          </div>
+          <div class="actions">
+            <button class="secondary" type="submit">Login</button>
+          </div>
+        </form>
+        <div id="login-status" class="status"></div>
+        <pre id="token-box">Token will appear here.</pre>
+      </section>
+    </div>
+
+    <div class="note">
+      API endpoints:
+      <code>POST /users/</code>,
+      <code>POST /auth/login</code>,
+      <code>GET /docs</code>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = "http://127.0.0.1:8000";
+    const createForm = document.getElementById("create-form");
+    const loginForm = document.getElementById("login-form");
+    const createStatus = document.getElementById("create-status");
+    const loginStatus = document.getElementById("login-status");
+    const tokenBox = document.getElementById("token-box");
+
+    async function postJson(url, data) {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.detail || "Request failed");
+      }
+      return payload;
+    }
+
+    createForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      createStatus.classList.remove("error");
+      createStatus.textContent = "Saving...";
+      try {
+        const result = await postJson(API_BASE + "/users/", {
+          name: createForm.name.value.trim(),
+          email: createForm.email.value.trim(),
+          password: createForm.password.value
+        });
+        createStatus.textContent = "Created user: " + result.email;
+        createForm.reset();
+      } catch (error) {
+        createStatus.classList.add("error");
+        createStatus.textContent = error.message;
+      }
+    });
+
+    loginForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      loginStatus.classList.remove("error");
+      loginStatus.textContent = "Logging in...";
+      tokenBox.textContent = "Token will appear here.";
+      try {
+        const result = await postJson(API_BASE + "/auth/login", {
+          email: loginForm.email.value.trim(),
+          password: loginForm.password.value
+        });
+        loginStatus.textContent = "Login successful";
+        tokenBox.textContent = JSON.stringify(result, null, 2);
+      } catch (error) {
+        loginStatus.classList.add("error");
+        loginStatus.textContent = error.message;
+      }
+    });
+  </script>
+</body>
+</html>

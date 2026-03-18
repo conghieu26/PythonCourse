@@ -1,7 +1,7 @@
 # 🚀 PythonCourse
 
 ## 📌 Overview
-Repository này chứa các **Python mini projects cơ bản** được viết lại nhằm:
+Repository này chứa các **Python mini projects cơ bản và Extra Project** được viết lại nhằm:
 - Củng cố kiến thức nền tảng Python  
 - Viết code rõ ràng, dễ đọc hơn  
 - Tổ chức lại project gọn gàng và nhất quán  
@@ -9,7 +9,7 @@ Repository này chứa các **Python mini projects cơ bản** được viết l
 ---
 
 ## 🎯 Goals
-- Hoàn thành **20 mini projects cơ bản**
+- Hoàn thành **14 mini projects cơ bản** và **1 Extra projects cơ bản**
 - Mỗi project đảm bảo:
   - Chạy đúng chức năng
   - Logic rõ ràng
@@ -18,7 +18,7 @@ Repository này chứa các **Python mini projects cơ bản** được viết l
 ---
 
 ## 📊 Progress
-**Completed: 14 / 20 projects**
+**Completed: 15 / 20 projects**
 
 | # | Project | Description | Status |
 |---|--------|------------|--------|
@@ -36,12 +36,7 @@ Repository này chứa các **Python mini projects cơ bản** được viết l
 |12|Banking Program|Mô phỏng ngân hàng|✅ Completed|
 |13|Slot Machine|Game máy đánh bạc|✅ Completed|
 |14|Encryption Program|Mã hóa văn bản|✅ Completed|
-|15|Hangman Game|Game đoán chữ|🕒 Planned|
-|16|Alarm Clock|Báo thức|🕒 Planned|
-|17|Digital Clock|Đồng hồ điện tử|🕒 Planned|
-|18|Stopwatch|Bấm giờ|🕒 Planned|
-|19|Weather API App|Gọi API thời tiết|🕒 Planned|
-|20|Extra Project|Dự án bổ sung|🕒 Planned|
+|25|Extra Project|Dự án bổ sung|✅ Completed|
 
 ---
 
@@ -68,6 +63,7 @@ PythonProject/
 │   ├── temperature_convert_program.py
 │   ├── weight_converter_program.py
 │   ├── encryption_program.py
+|   ├──   final_project
 └── README.md
 ```
 

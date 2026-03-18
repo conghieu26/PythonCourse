@@ -36,17 +36,32 @@ app.mount("/assets", StaticFiles(directory=FRONTEND_DIR), name="assets")
 
 @app.get("/")
 def root():
-    return FileResponse(FRONTEND_DIR / "frontend.html")
+    return FileResponse(FRONTEND_DIR / "index.html")
 
 
 @app.get("/frontend")
 def frontend():
-    return RedirectResponse(url="/", status_code=307)
+    return RedirectResponse(url="/tasks", status_code=307)
 
 
 @app.get("/fontend")
 def fontend():
-    return RedirectResponse(url="/", status_code=307)
+    return RedirectResponse(url="/tasks", status_code=307)
+
+
+@app.get("/register")
+def register_page():
+    return FileResponse(FRONTEND_DIR / "register.html")
+
+
+@app.get("/login")
+def login_page():
+    return FileResponse(FRONTEND_DIR / "login.html")
+
+
+@app.get("/tasks")
+def tasks_page():
+    return FileResponse(FRONTEND_DIR / "tasks.html")
 
 
 @app.get("/favicon.ico", include_in_schema=False)

@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Task Manager</title>
+  <title>Tasks</title>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
   <main class="shell">
     <header class="topbar">
       <div>
-        <p class="eyebrow">Final Project</p>
+        <p class="eyebrow">Workspace</p>
         <h1>Task Manager</h1>
         <p class="lead">Quản lý task đơn giản, rõ ràng và dễ dùng.</p>
       </div>
-      <div class="badge" id="task-badge">0 items</div>
+      <a class="badge" href="/">Home</a>
     </header>
 
     <section class="layout">
@@ -72,7 +72,6 @@
     const taskForm = document.getElementById("task-form");
     const taskList = document.getElementById("task-list");
     const taskCount = document.getElementById("task-count");
-    const taskBadge = document.getElementById("task-badge");
     const formStatus = document.getElementById("form-status");
     const refreshBtn = document.getElementById("refresh-btn");
 
@@ -124,7 +123,6 @@
       taskList.innerHTML = "<p class='muted'>Loading tasks...</p>";
       const tasks = await request("/tasks/");
       taskCount.textContent = tasks.length;
-      taskBadge.textContent = `${tasks.length} items`;
 
       if (!tasks.length) {
         taskList.innerHTML = "<p class='muted'>No tasks yet.</p>";

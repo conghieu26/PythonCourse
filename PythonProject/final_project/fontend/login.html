@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="shell auth-shell">
+    <section class="auth-grid">
+      <div class="auth-copy card">
+        <p class="eyebrow">Account</p>
+        <h1>Welcome back</h1>
+        <p class="lead">
+          Đăng nhập để tiếp tục vào task manager. Giao diện được giữ đơn giản để tập trung vào thao tác chính.
+        </p>
+
+        <div class="auth-points">
+          <div class="auth-point">
+            <strong>Quick access</strong>
+            <span>Điền email và mật khẩu để lấy token.</span>
+          </div>
+          <div class="auth-point">
+            <strong>Simple flow</strong>
+            <span>Nếu chưa có tài khoản, chuyển sang register.</span>
+          </div>
+        </div>
+
+        <a class="badge link-btn inline-gap" href="/">Back home</a>
+      </div>
+
+      <section class="card auth-card">
+        <div class="section-head">
+          <div>
+            <p class="section-tag">Login</p>
+            <h2>Access your account</h2>
+          </div>
+          <a class="badge link-btn" href="/register">Register</a>
+        </div>
+
+        <form id="login-form" class="auth-form">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="a@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="123456" required>
+          </div>
+
+          <div class="actions auth-actions">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+
+        <div id="login-status" class="status"></div>
+        <pre id="token-box" class="token-box">Token will appear here.</pre>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById("login-form");
+    const statusBox = document.getElementById("login-status");
+    const tokenBox = document.getElementById("token-box");
+
+    async function postJson(url, data) {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(payload.detail || "Request failed");
+      return payload;
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusBox.classList.remove("error");
+      statusBox.textContent = "Logging in...";
+      tokenBox.textContent = "Token will appear here.";
+
+      try {
+        const result = await postJson("/auth/login", {
+          email: form.email.value.trim(),
+          password: form.password.value
+        });
+        statusBox.textContent = "Login successful.";
+        tokenBox.textContent = JSON.stringify(result, null, 2);
+      } catch (error) {
+        statusBox.classList.add("error");
+        statusBox.textContent = error.message;
+      }
+    });
+  </script>
+</body>
+</html>

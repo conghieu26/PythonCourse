@@ -59,8 +59,10 @@
           email: form.email.value.trim(),
           password: form.password.value
         });
-        form.reset();
-        statusBox.textContent = "Account created.";
+        statusBox.textContent = "Account created. Redirecting to login...";
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 900);
       } catch (error) {
         statusBox.classList.add("error");
         statusBox.textContent = error.message;

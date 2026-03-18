@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from ..db.database import SessionLocal
 from ..schemas.user import UserCreate, UserResponse
@@ -15,4 +15,7 @@ def get_db():
 
 @router.post("/", response_model=UserResponse)
 def create(data: UserCreate, db: Session = Depends(get_db)):
-    return create_user(db, data)
+    try:
+        return create_user(db, data)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))

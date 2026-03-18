@@ -4,8 +4,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response, RedirectResponse
 from fastapi.staticfiles import StaticFiles
-from backend.app.db.database import Base, engine
-from backend.app.api import auth, user
+from .api import auth, task, user
+from .db.database import Base, engine
+from .model import task as task_model  # noqa: F401
+from .model import user as user_model  # noqa: F401
 
 app = FastAPI()
 
@@ -28,6 +30,7 @@ Base.metadata.create_all(bind=engine)
 
 app.include_router(user.router)
 app.include_router(auth.router)
+app.include_router(task.router)
 
 app.mount("/assets", StaticFiles(directory=FRONTEND_DIR), name="assets")
 
